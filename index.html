@@ -1,61 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Access Error</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page does not exist.</title>
+  <link rel="icon" href="https://raw.linkhub.space/filehost/resource/<3-icon.png" type="image/x-icon" />
+  <style>
+    :root {
+      --bgColor: #121212;
+      --bgColor2: #1f1f1f;
+      --accentColor: #e0e0e0;
+      --accentColor2: #616161;
+      --uriColor: #1e90ff;
+      --uriColor2: #64b5f6;
+      --box-shadow: rgba(0, 0, 0, 0.5);
+    }
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-            background-color: black;
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bgColor);
+      color: var(--accentColor);
+      margin: 0;
+      padding: 0;
+      animation: 1s ease-out .3s 1 transitionAnimation;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: var(--bgColor2);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px var(--box-shadow);
+      border: 1px solid var(--accentColor2);
+    }
+
+    .container h1, h2, h3 {
+      color: var(--accentColor);
+    }
+    
+    /*-------------------------animations-----------------------*/
+     @keyframes transitionAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
         }
-
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
-
-        h1 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
-
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
-
-        @media only screen and (max-width: 280px) {
-
-            body, p {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
-
-        }
-
-    </style>
+      }
+  </style>
 </head>
-<body>
-    <h1>This page does not exist!</h1>
-    <p>Sorry, but the page acts only as a mail server endpoint to allow the domain you entered to act as a mail service.</p>
-</body>
+  <body>
+    <header id="header"></header>
+    <div class="container">
+      <div style="text-align: center;">
+        <p style="color: var(--accentColor2); margin-bottom: -30px; padding-left: vw;"><small>Announced: September 28, 2024</small></p>
+        <h1>This page does not exist.</h1>
+  
+        <p>This page (domain) you accessed is only used as a mail service backend.
+        <br>
+        <br>If you got redirected here 'cause you singed to a webpage using our mail service please look at the mailbox you connected to our domain-mail.
+        <br>
+        <br>
+        <br><a href="https://linkhub.space/legal#privacy-policy" target="_blank">Privacy Policy</a></p>
+      </div>
+    </div>
+  </body>
 </html>
-<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
